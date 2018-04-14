@@ -16,12 +16,14 @@
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import Home from './components/Home.vue'
+import Menu from './components/Menu.vue'
 
 export default {
   components: {
     cnpHeader: Header,
     cnpFooter: Footer,
-    cnpHome: Home
+    cnpHome:   Home,
+    cnpMenu:   Menu
   }
 }
 </script>
