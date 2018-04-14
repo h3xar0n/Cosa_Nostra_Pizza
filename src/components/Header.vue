@@ -18,4 +18,16 @@
   header {
     margin-bottom: 20px;
   }
+
+  .navbar-brand {
+    font-size: 1.5em;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin: 0 1.5em;
+  }
 </style>
