@@ -7,6 +7,9 @@
       <cnp-home></cnp-home>
     </div>
     <div class="container">
+      <cnp-menu></cnp-menu>
+    </div>
+    <div class="container">
       <cnp-footer></cnp-footer>
     </div>
   </div>
