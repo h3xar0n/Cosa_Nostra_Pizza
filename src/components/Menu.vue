@@ -9,22 +9,24 @@
             <th>Add to basket</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-for="item in getMenuItems">
           <tr>
             <td>
-              <strong>Margherita</strong>
+              <strong>{{ item.name }}</strong>
             </td>
           </tr>
-          <tr>
-            <td>9"</td>
-            <td>$12,000,000.95</td>
-            <td>
-              <button class="btn btn-sm btn-outline-success" type="button">+</button>
+          <tr v-for="option in item.options">
+            <td>{{ option.size }}"</td>
+            <td>${{ option.price }}</td>
+            <td><button class="btn btn-sm btn-outline-success" 
+                        type="button"
+                        @click="addToBasket( item, option )">+</button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+    {{ basket }}
   </div>
 </template>
 
@@ -32,9 +34,10 @@
   export default {
     data() {
       return {
+        basket: [],
         getMenuItems: {
           1: {
-            'name': 'Margherita',
+            'name': 'Omerta',
             'description': 'A delicious tomato based pizza topped with mozzarella',
             'options': [{
               'size': 9,
@@ -45,7 +48,7 @@
             }]
           },
           2: {
-            'name': 'Pepperoni',
+            'name': 'Poor Impulse Control',
             'description': 'A delicious tomato based pizza topped with mozzarella and pepperoni',
             'options': [{
               'size': 9,
@@ -56,7 +59,7 @@
             }]
           },
           3: {
-            'name': 'Ham and Pineapple',
+            'name': 'Pearly Gates',
             'description': 'A delicious tomato based pizza topped with mozzarella, ham and pineapple',
             'options': [{
               'size': 9,
@@ -68,8 +71,18 @@
           }
         }
       }
+    },
+    methods: {
+      addToBasket(item, option) {
+        this.basket.push({
+          name: item.name,
+          price: option.price,
+          size: option.size,
+          quantity: 1
+        })
+      }
     }
   }
-  }
+  
 
 </script>
