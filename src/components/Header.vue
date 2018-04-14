@@ -13,3 +13,9 @@
     </nav>
   </header>
 </template>
+
+<style>
+  header {
+    margin-bottom: 20px;
+  }
+</style>
