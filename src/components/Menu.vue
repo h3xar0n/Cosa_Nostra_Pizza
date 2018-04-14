@@ -6,7 +6,7 @@
           <tr>
             <th>Size</th>
             <th>Price</th>
-            <th>Add to basket</th>
+            <th>Add to cart</th>
           </tr>
         </thead>
         <tbody v-for="item in getMenuItems" :key="item">
@@ -19,14 +19,14 @@
             <td>{{ option.size }}"</td>
             <td>${{ option.price }}</td>
             <td>
-              <button class="btn btn-sm btn-outline-success" type="button" @click="addToBasket( item, option )">+</button>
+              <button class="btn btn-sm btn-outline-success" type="button" @click="addToCart( item, option )">+</button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="col-sm-12 col-md-6">
-      <div v-if="basket.length > 0">
+      <div v-if="cart.length > 0">
         <table class="table">
           <thead class="thead-default">
             <tr>
@@ -35,7 +35,7 @@
               <th>Total</th>
             </tr>
           </thead>
-          <tbody v-for="item in basket" :key="item">
+          <tbody v-for="item in cart" :key="item">
             <tr>
               <td>
                 <button class="btn btn-sm" type="button">-</button>
@@ -51,7 +51,7 @@
         <button class="btn btn-success btn-block">Place Order</button>
       </div>
       <div v-else>
-        <p>{{ basketText }}</p>
+        <p>{{ cartText }}</p>
       </div>
     </div>
   </div>
@@ -61,8 +61,8 @@
   export default {
     data() {
       return {
-        basket: [],
-        basketText: 'Your basket it empty!',
+        cart: [],
+        cartText: 'Your cart it empty!',
         getMenuItems: {
           1: {
             'name': 'Omerta',
@@ -101,8 +101,8 @@
       }
     },
     methods: {
-      addToBasket(item, option) {
-        this.basket.push({
+      addToCart(item, option) {
+        this.cart.push({
           name: item.name,
           price: option.price,
           size: option.size,
