@@ -38,12 +38,16 @@
           <tbody v-for="item in cart" :key="item">
             <tr>
               <td>
-                <button class="btn btn-sm" type="button">-</button>
+                <button class="btn btn-sm" 
+                        type="button"
+                        @click="decreaseQuantity(item)">-</button>
                 <span>{{ item.quantity }}</span>
-                <button class="btn btn-sm" type="button">+</button>
+                <button class="btn btn-sm" 
+                        type="button"
+                        @click="increaseQuantity(item)">+</button>
               </td>
               <td>{{ item.name }} {{ item.size }}"</td>
-              <td>${{ item.price }}</td>
+              <td>${{ item.price * item.quantity }}</td>
             </tr>
           </tbody>
         </table>
@@ -108,6 +112,12 @@
           size: option.size,
           quantity: 1
         })
+      },
+      increaseQuantity(item) {
+        item.quantity++;
+      },
+      decreaseQuantity(item) {
+        item.quantity--;
       }
     }
   }
