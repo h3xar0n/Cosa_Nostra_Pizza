@@ -22,6 +22,24 @@
 </template>
 
 <script>
-  import Firebase from 'firebase'
+import Firebase from 'firebase'
 
+export default {
+  methods: {
+    signIn() {
+      let email = document.getElementById('email').value;
+      let password = document.getElementById('password').value;
+
+      Firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error){
+        let errorCode = error.code;
+        let errorMessage = error.message;
+
+        if (errorCode === '')
+      });
+    },
+    signOut() {
+
+    }
+  }
+}
 </script>
