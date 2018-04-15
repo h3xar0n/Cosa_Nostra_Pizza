@@ -10,6 +10,9 @@
       <cnp-menu></cnp-menu>
     </div>
     <div class="container">
+      <cnp-admin></cnp-admin>
+    </div>
+    <div class="container">
       <cnp-footer></cnp-footer>
     </div>
   </div>
@@ -20,13 +23,15 @@ import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import Home from './components/Home.vue'
 import Menu from './components/Menu.vue'
+import Admin from './components/Admin.vue'
 
 export default {
   components: {
     cnpHeader: Header,
     cnpFooter: Footer,
     cnpHome:   Home,
-    cnpMenu:   Menu
+    cnpMenu:   Menu,
+    cnpAdmin:  Admin
   }
 }
 </script>
