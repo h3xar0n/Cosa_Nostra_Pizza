@@ -12,6 +12,12 @@
             <th>Remove from Menu</th>
           </tr>
         </thead>
+        <tbody>
+          <tr>
+            <td>Margherita</td>
+            <td><button class="btn btn-outline-danger btn-sm">X</button></td>
+          </tr>
+        </tbody>
       </table>
     </div>
     <div class="col-sm-12 col-md-6">
