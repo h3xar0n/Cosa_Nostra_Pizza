@@ -38,13 +38,9 @@
           <tbody v-for="item in cart" :key="item">
             <tr>
               <td>
-                <button class="btn btn-sm" 
-                        type="button"
-                        @click="decreaseQuantity(item)">-</button>
+                <button class="btn btn-sm" type="button" @click="decreaseQuantity(item)">-</button>
                 <span>{{ item.quantity }}</span>
-                <button class="btn btn-sm" 
-                        type="button"
-                        @click="increaseQuantity(item)">+</button>
+                <button class="btn btn-sm" type="button" @click="increaseQuantity(item)">+</button>
               </td>
               <td>{{ item.name }} {{ item.size }}"</td>
               <td>${{ item.price * item.quantity }}</td>
@@ -111,14 +107,20 @@
           price: option.price,
           size: option.size,
           quantity: 1
-        })
+        });
+      },
+      removeFromCart(item) {
+        this.cart.splice(this.cart.indexOf(item), 1);
       },
       increaseQuantity(item) {
         item.quantity++;
       },
       decreaseQuantity(item) {
         item.quantity--;
-      }
+        if (item.quantity === 0) {
+          this.removeFromCart(item);
+        }
+      },
     }
   }
 

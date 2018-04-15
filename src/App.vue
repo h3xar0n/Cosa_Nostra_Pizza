@@ -3,7 +3,7 @@
     <div class="container">
       <cnp-header></cnp-header>
     </div>
-    <div class="container">
+    <div class="container-flex">
       <cnp-home></cnp-home>
     </div>
     <div class="container">
