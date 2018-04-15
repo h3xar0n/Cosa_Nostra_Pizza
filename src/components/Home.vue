@@ -3,7 +3,8 @@
     <div id="home" class="col-sm-12 text-center">
       <div class="background">
         <h1>COSA NOSTRA PIZZA</h1>
-        <h2>Leave the Phone--Take the Canolli</h2>
+        <h2>IN 30 MINS</h2>
+        <h2 class="crimson">OR ELSE...</h2>
         <button class="btn btn-success">Hit to Get Made.</button>
       </div>
     </div>
@@ -23,12 +24,18 @@
   }
 
   .background {
-    background: #14151978;
+    background: #141519cc;
     color: #f1ee71;
     border-radius: 20px;
     border: 10px double white;
     width: 40%;
     margin: 0 auto;
     padding: 20px 0;
+  }
+  .background h2 {
+    color: white;
+  }
+  h2.crimson {
+    color: red;
   }
 </style>
