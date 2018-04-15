@@ -1,7 +1,7 @@
 <template>
   <header class="row">
     <nav class="navbar navbar-toggleable-md navbar-light">
-      <a href="/" class="navbar-brand">COSA NOSTRA PIZZA</a>
+      <a href="/" class="navbar-brand">COSA NOSTRA 🍕</a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a href="" class="nav-link">HOME</a>

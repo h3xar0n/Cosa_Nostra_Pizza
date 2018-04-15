@@ -34,11 +34,19 @@ export default {
         let errorCode = error.code;
         let errorMessage = error.message;
 
-        if (errorCode === '')
-      });
+        if (errorCode === 'auth/wrong-password') {
+          alert('Wrong password')
+        } else {
+          alert(errorMessage)
+        }
+      })
     },
     signOut() {
-
+      Firebase.auth().signOut().then(function() {
+        alert('logged out');
+      }).catch(function(error){
+        alert(errorMessage);
+      })
     }
   }
 }
