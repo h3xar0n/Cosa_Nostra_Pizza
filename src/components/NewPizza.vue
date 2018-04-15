@@ -63,27 +63,29 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        newPizza: {
-          'name': 'Omerta',
-          'description': 'Eg. A delicious tomato based pizza topped with mozzarella',
-          'options': [{
-            'size': 9,
-            'price': 6.95
-          }, {
-            'size': 12,
-            'price': 10.95
-          }]
-        }
-      }
-    },
-    methods: {
-      addMenuItem() {
-        console.log(this.newPizza)
+import { dbMenuRef } from '../firebaseConfig'
+
+export default {
+  data() {
+    return {
+      newPizza: {
+        'name': 'Omerta',
+        'description': 'Eg. A delicious tomato based pizza topped with mozzarella',
+        'options': [{
+          'size': 9,
+          'price': 6.95
+        }, {
+          'size': 12,
+          'price': 10.95
+        }]
       }
     }
+  },
+  methods: {
+    addMenuItem() {
+      dbMenuRef.push(this.newPizza)
+    }
   }
+}
 
 </script>
