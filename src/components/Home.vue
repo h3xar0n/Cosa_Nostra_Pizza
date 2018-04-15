@@ -2,7 +2,7 @@
   <div class="row">
     <div id="home" class="col-sm-12 text-center">
       <div class="background">
-        <h1>COSA NOSTRA PIZZA</h1>
+        <h1>COSA NOSTRA 🍕</h1>
         <h2>IN 30 MINS</h2>
         <h2 class="crimson">OR ELSE...</h2>
         <button class="btn btn-success">Hit to Get Made.</button>
