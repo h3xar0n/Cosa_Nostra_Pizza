@@ -3,9 +3,8 @@
     <div id="home" class="col-sm-12 text-center">
       <div class="background">
         <h1>COSA NOSTRA 🍕</h1>
-        <h2>IN 30 MINS</h2>
-        <h2 class="crimson">OR ELSE...</h2>
-        <button class="btn btn-success">Hit to Get Made.</button>
+        <h2>IN 30 MINS OR <span class="crimson">ELSE.</span></h2>
+        <button class="btn btn-success">get made</button>
       </div>
     </div>
   </div>
@@ -13,8 +12,7 @@
 
 <style>
   #home {
-    background: url('../../src/assets/cosanostra.jpg');
-    background-position: center;
+    background: url('../../src/assets/hiro_n_yt.jpg') no-repeat center center / cover;
     height: auto;
     padding: 10%;
   }
@@ -23,19 +21,38 @@
     margin: 6%;
   }
 
+  h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  button {
+    font-family: 'Ubuntu Mono', monospace;
+  }
+
   .background {
-    background: #141519cc;
-    color: #f1ee71;
+    background: #12192c;
+    color: #aec53f;
     border-radius: 20px;
-    border: 10px double white;
-    width: 40%;
+    border: 10px solid #aaddf7;
     margin: 0 auto;
     padding: 20px 0;
+    width: 38%;
+    min-width: 470px;
   }
   .background h2 {
     color: white;
   }
-  h2.crimson {
+  .crimson {
     color: red;
+  }
+  .btn-success {
+    color: #1a1b27;
+    background-color: #aec53f;
+    border: 1px single #1a1b27;
+  }
+  .btn-success:hover {
+    color: #eee;
+    background-color: red;
+    border-color: #eee;
   }
 </style>
