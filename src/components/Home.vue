@@ -21,14 +21,6 @@
     margin: 6%;
   }
 
-  h1, h2 {
-    font-family: 'Orbitron', sans-serif;
-  }
-
-  button {
-    font-family: 'Ubuntu Mono', monospace;
-  }
-
   .background {
     background: #12192c;
     color: #aec53f;

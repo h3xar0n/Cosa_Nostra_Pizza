@@ -25,7 +25,12 @@ export default {
 </script>
 
 <style>
-  p, th, td {
+
+  h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  h3, p, th, td, button, em, label, input, textarea {
     font-family: 'Ubuntu Mono', monospace;
   }
 </style>
