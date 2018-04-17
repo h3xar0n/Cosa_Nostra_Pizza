@@ -3,12 +3,12 @@
     <nav class="navbar navbar-toggleable-md navbar-light">
       <a href="/" class="navbar-brand">COSA NOSTRA 🍕</a>
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <router-link to="/"><a class="nav-link">HOME</a></router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/menu"><a class="nav-link">MENU</a></router-link>
-        </li>
+          <router-link to="/" tag="li">
+            <a class="nav-link">HOME</a>
+          </router-link>
+          <router-link to="/menu" tag="li">
+            <a class="nav-link">MENU</a>
+          </router-link>
       </ul>
     </nav>
   </header>
