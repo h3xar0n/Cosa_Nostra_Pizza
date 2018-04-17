@@ -27,7 +27,7 @@
     flex-direction: row;
   }
 
-  .nav-item {
+  .nav-link {
     margin: 0 1.5em;
   }
 </style>
