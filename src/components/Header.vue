@@ -3,12 +3,12 @@
     <nav class="navbar navbar-toggleable-md navbar-light">
       <a href="/" class="navbar-brand">COSA NOSTRA 🍕</a>
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="" class="nav-link">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a href="" class="nav-link">MENU</a>
-        </li>
+          <router-link to="/" tag="li">
+            <a class="nav-link">HOME</a>
+          </router-link>
+          <router-link to="/menu" tag="li">
+            <a class="nav-link">MENU</a>
+          </router-link>
       </ul>
     </nav>
   </header>
@@ -28,7 +28,7 @@
     flex-direction: row;
   }
 
-  .nav-item {
+  .nav-link {
     margin: 0 1.5em;
   }
 </style>
