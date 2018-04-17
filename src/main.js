@@ -1,12 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Home from './components/Home.vue'
+import Menu from './components/Menu.vue'
 import App from './App.vue'
 
 Vue.use(VueRouter)
 
-const router = new VueRouter({})
+const routes = [{
+  path: { path: '/', component: Home },
+  path: { path: '/menu', component: Menu }
+}]
+
+const router = new VueRouter({
+  routes: routes
+})
 
 new Vue({
   el: '#app',
+  router,
   render: h => h(App)
 })
