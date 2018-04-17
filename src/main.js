@@ -6,13 +6,13 @@ import App from './App.vue'
 
 Vue.use(VueRouter)
 
-const routes = [{
-  path: { path: '/', component: Home },
-  path: { path: '/menu', component: Menu }
-}]
+const routes = [
+  { path: '/', component: Home },
+  { path: '/menu', component: Menu }
+]
 
 const router = new VueRouter({
-  routes: routes
+  routes
 })
 
 new Vue({
