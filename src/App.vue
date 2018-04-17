@@ -25,5 +25,7 @@ export default {
 </script>
 
 <style>
-
+  p, th, td {
+    font-family: 'Ubuntu Mono', monospace;
+  }
 </style>
