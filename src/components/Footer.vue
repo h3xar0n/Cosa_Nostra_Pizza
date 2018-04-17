@@ -2,15 +2,15 @@
   <footer class="row">
     <nav class="navbar navbar-toggleable-md navbar-light">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <router-link to="/" tag="li">
           <a href="" class="nav-link">HOME</a>
-        </li>
-        <li class="nav-item">
+        </router-link>
+        <router-link to="/menu" tag="li">
           <a href="" class="nav-link">MENU</a>
-        </li>
-        <li class="nav-item">
+        </router-link>
+        <router-link to="/admin" tag="li">
           <a href="" class="nav-link">ADMIN</a>
-        </li>
+        </router-link>
       </ul>
     </nav>
   </footer>
