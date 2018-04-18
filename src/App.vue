@@ -3,9 +3,7 @@
     <div class="container">
       <cnp-header></cnp-header>
     </div>
-    <div class="container-fluid">
-      <router-view></router-view>
-    </div>
+    <router-view></router-view>
     <div class="container">
       <cnp-footer></cnp-footer>
     </div>

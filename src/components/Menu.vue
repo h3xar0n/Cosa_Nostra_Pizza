@@ -1,57 +1,59 @@
 <template>
-  <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <table class="table table-hover">
-        <thead class="thead-default">
-          <tr>
-            <th>Size</th>
-            <th>Price</th>
-            <th>Add to cart</th>
-          </tr>
-        </thead>
-        <tbody v-for="item in getMenuItems" :key="item">
-          <tr>
-            <td>
-              <strong>{{ item.name }}</strong>
-            </td>
-          </tr>
-          <tr v-for="option in item.options" :key="option">
-            <td>{{ option.size }}"</td>
-            <td>${{ option.price }}</td>
-            <td>
-              <button class="btn btn-sm btn-outline-success" type="button" @click="addToCart( item, option )">+</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-sm-12 col-md-6">
-      <div v-if="cart.length > 0">
-        <table class="table">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <table class="table table-hover">
           <thead class="thead-default">
             <tr>
-              <th>Quantity</th>
-              <th>Item</th>
-              <th>Total</th>
+              <th>Size</th>
+              <th>Price</th>
+              <th>Add to cart</th>
             </tr>
           </thead>
-          <tbody v-for="item in cart" :key="item">
+          <tbody v-for="item in getMenuItems" :key="item">
             <tr>
               <td>
-                <button class="btn btn-sm" type="button" @click="decreaseQuantity(item)">-</button>
-                <span>{{ item.quantity }}</span>
-                <button class="btn btn-sm" type="button" @click="increaseQuantity(item)">+</button>
+                <strong>{{ item.name }}</strong>
               </td>
-              <td>{{ item.name }} {{ item.size }}"</td>
-              <td>${{ item.price * item.quantity }}</td>
+            </tr>
+            <tr v-for="option in item.options" :key="option">
+              <td>{{ option.size }}"</td>
+              <td>${{ option.price }}</td>
+              <td>
+                <button class="btn btn-sm btn-outline-success" type="button" @click="addToCart( item, option )">+</button>
+              </td>
             </tr>
           </tbody>
         </table>
-        <p>Order total:</p>
-        <button class="btn btn-success btn-block">Place Order</button>
       </div>
-      <div v-else>
-        <p>{{ cartText }}</p>
+      <div class="col-sm-12 col-md-6">
+        <div v-if="cart.length > 0">
+          <table class="table">
+            <thead class="thead-default">
+              <tr>
+                <th>Quantity</th>
+                <th>Item</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody v-for="item in cart" :key="item">
+              <tr>
+                <td>
+                  <button class="btn btn-sm" type="button" @click="decreaseQuantity(item)">-</button>
+                  <span>{{ item.quantity }}</span>
+                  <button class="btn btn-sm" type="button" @click="increaseQuantity(item)">+</button>
+                </td>
+                <td>{{ item.name }} {{ item.size }}"</td>
+                <td>${{ item.price * item.quantity }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Order total:</p>
+          <button class="btn btn-success btn-block">Place Order</button>
+        </div>
+        <div v-else>
+          <p>{{ cartText }}</p>
+        </div>
       </div>
     </div>
   </div>

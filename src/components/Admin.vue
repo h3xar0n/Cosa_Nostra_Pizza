@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-6">
         <cnp-new-pizza></cnp-new-pizza>

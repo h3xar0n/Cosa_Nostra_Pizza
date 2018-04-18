@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h2>"You've got a friend in The Family"</h2>
     <nav class="navbar navbar-toggleable-md navbar-light">
       <ul class="navbar-nav">
