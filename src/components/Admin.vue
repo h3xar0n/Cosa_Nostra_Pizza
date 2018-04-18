@@ -65,6 +65,13 @@ export default {
   components: {
     cnpNewPizza: NewPizza,
     cnpLogin: Login
-  }  
+  },
+  beforeRouteLeave: (to, from, next) => {
+    if(confirm("The moment you try to get out, we'll pull you back in!") === true ) {
+      next()
+    } else {
+      next(false)
+    }
+  }
 }
 </script>
