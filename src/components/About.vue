@@ -3,16 +3,16 @@
     <h2>"You've got a friend in The Family"</h2>
     <nav class="navbar navbar-toggleable-md navbar-light">
       <ul class="navbar-nav">
-        <router-link to="/history" tag="li">
+        <router-link :to="{ name: 'historyLink' }" tag="li">
           <a class="nav-link">HISTORY</a>
         </router-link>
-        <router-link to="/contact" tag="li">
+        <router-link :to="{ name: 'contactLink' }" tag="li">
           <a class="nav-link">CONTACT</a>
         </router-link>
-        <router-link to="/ordering-guide" tag="li">
+        <router-link :to="{ name: 'orderingGuideLink' }" tag="li">
           <a class="nav-link">ORDER </a>
         </router-link>
-        <router-link to="/delivery" tag="li">
+        <router-link :to="{ name: 'deliveryLink' }" tag="li">
           <a class="nav-link">HIGH-SPEED DELIVERY</a>
         </router-link>
       </ul>

@@ -13,15 +13,15 @@ import App from './App.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/menu', component: Menu },
-  { path: '/about', component: About, children: [
-    { path: '/contact', component: Contact },
-    { path: '/history', component: History },
-    { path: '/delivery', component: Delivery },
-    { path: '/ordering', component: OrderingGuide }
+  { path: '/',      name: 'homeLink',  component: Home },
+  { path: '/menu',  name: 'menuLink',  component: Menu },
+  { path: '/admin', name: 'adminLink', component: Admin },
+  { path: '/about', name: 'aboutLink', component: About, children: [
+    { path: '/contact',  name: 'contactLink',       component: Contact },
+    { path: '/history',  name: 'historyLink',       component: History },
+    { path: '/delivery', name: 'deliveryLink',      component: Delivery },
+    { path: '/ordering', name: 'orderingGuideLink', component: OrderingGuide }
   ] },
-  { path: '/admin', component: Admin },
   { path: '*', redirect: '/' }
 ]
 
