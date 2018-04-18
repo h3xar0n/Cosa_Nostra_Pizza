@@ -49,10 +49,11 @@
             </tbody>
           </table>
           <p>Order total:</p>
-          <button class="btn btn-success btn-block">Place Order</button>
+          <button class="btn btn-success btn-block"
+                  @click="addNewOrder">Place Order</button>
         </div>
         <div v-else>
-          <p>{{ cartText }}</p>
+          <p>{{ cartText }}</p> {{ this.$store.state.orders }}
         </div>
       </div>
     </div>
@@ -69,7 +70,6 @@
     },
     computed: {
       getMenuItems() {
-        // return this.$store.state.menuItems
         return this.$store.getters.getMenuItems
       }
     },
@@ -94,6 +94,11 @@
           this.removeFromCart(item);
         }
       },
+      addNewOrder() {
+        this.$store.commit('addOrder', this.cart)
+        this.cart = []
+        this.cartText = "Thank you, your order has been placed. 😎"
+      }
     }
   }
 

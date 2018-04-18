@@ -40,10 +40,13 @@ export const store = new Vuex.Store({
         }]
       }
     },
-    orders: ['a', 'b', 'c']
+    orders: []
   },
   getters: {
     getMenuItems: state => state.menuItems,
-    numberOfOrders: state => state.orders.length
+    numberOfOrders: state => state.orders
+  },
+  mutations: {
+    addOrder: (state, orders) => state.orders.push(orders)
   }
 })
