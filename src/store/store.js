@@ -39,6 +39,11 @@ export const store = new Vuex.Store({
           'price': 12.95
         }]
       }
-    }
+    },
+    orders: ['a', 'b', 'c']
+  },
+  getters: {
+    getMenuItems: state => state.menuItems,
+    numberOfOrders: state => state.orders.length
   }
 })
