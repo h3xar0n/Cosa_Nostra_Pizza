@@ -13,9 +13,9 @@
               <th>Remove from Menu</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody :key="item" v-for="item in getMenuItems">
             <tr>
-              <td>Margherita</td>
+              <td>{{ item.name }}</td>
               <td><button class="btn btn-outline-danger btn-sm">X</button></td>
             </tr>
           </tbody>
@@ -65,6 +65,11 @@ export default {
   components: {
     cnpNewPizza: NewPizza,
     cnpLogin: Login
+  },
+  computed: {
+    getMenuItems() {
+      return this.$store.state.menuItems
+    }
   },
   beforeRouteLeave: (to, from, next) => {
     if(confirm("The moment you try to get out, we'll pull you back in!") === true ) {
