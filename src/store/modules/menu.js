@@ -13,7 +13,7 @@ const mutations = {
 }
 
 const actions = {
-   setMenuRef: firebaseAction(({ bindFirebaseRef }, { ref }) => {
+  setMenuRef: firebaseAction(({ bindFirebaseRef }, { ref }) => {
     bindFirebaseRef('menuItems', ref)
   })
 }
