@@ -50,10 +50,22 @@ export default {
   }
 
   .card {
+    border-radius: 10px;
+  }
+
+  .card, .card p, th {
     margin: 20px 0;
     padding: 5px 10px;
     background: #aaddf7;
     color: #12192c;
+  }
+
+  table {
+    border: 1px solid #aaddf7;
+  }
+
+  tr, p {
+    color: #aaddf7;
   }
 
   h1, h2 {
@@ -61,6 +73,6 @@ export default {
   }
 
   h3, p, th, td, button, em, label, input, textarea {
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: Futura, 'Saira Condensed', monospace;
   }
 </style>
