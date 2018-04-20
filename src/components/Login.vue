@@ -86,7 +86,7 @@ export default {
 </script>
 
 <style>
-  form {
-    margin: 20px 0;
+  form .btn {
+    margin: 20px;
   }
 </style>
