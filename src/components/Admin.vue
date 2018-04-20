@@ -13,7 +13,7 @@
               <th>Remove from Menu</th>
             </tr>
           </thead>
-          <tbody :key="item" v-for="item in getMenuItems">
+          <tbody :key="item['.key']" v-for="item in getMenuItems">
             <tr>
               <td>{{ item.name }}</td>
               <td><button class="btn btn-outline-danger btn-sm">X</button></td>
@@ -25,7 +25,9 @@
 
     <div class="row">
       <h3>Current orders: {{ numberOfOrders }}</h3>
-      <table class="table table-sm" :key="orders" v-for="orders in getOrders">
+      <table class="table table-sm" 
+             :key="orders['.key']" 
+             v-for="(orders, index) in getOrders">
         <thead class="thead-default">
           <tr>
             <th>Item</th>
@@ -36,7 +38,7 @@
         </thead>
         <tbody>
           <div class="order-number">
-            <strong><em>Order Number: 1</em></strong>
+            <strong><em>Order Number: {{ index + 1 }}</em></strong>
             <button class="btn btn-outline-danger btn-sm">X</button>
           </div>
           <tr :key="orderItems" v-for="orderItems in orders['.value']">
