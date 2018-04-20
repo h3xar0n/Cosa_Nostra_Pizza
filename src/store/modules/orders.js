@@ -7,12 +7,11 @@ const getters = {
 }
 
 const mutations = {
-
+  addOrder: (state, orders) => state.orders.push(orders)
 }
 
 const actions = {
-  addOrder: (state, orders) => state.orders.push(orders)
-
+  // None yet
 }
 
 export default {

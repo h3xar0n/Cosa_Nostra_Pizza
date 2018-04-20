@@ -17,7 +17,7 @@ const mutations = {
 }
 
 const actions = {
-  setUser: ({ commit }, user) => {
+  setUser ({ commit }, user) {
     commit('userStatus', user)
   }
 }
