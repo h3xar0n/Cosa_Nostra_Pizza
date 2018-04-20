@@ -49,8 +49,11 @@ export default {
     padding: 40px 0;
   }
 
-  .navbar-light .navbar-brand {
-    color: #eee;
+  .card {
+    margin: 20px 0;
+    padding: 5px 10px;
+    background: #aaddf7;
+    color: #12192c;
   }
 
   h1, h2 {
