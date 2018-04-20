@@ -14,6 +14,12 @@
   .order-number {
     margin: 10px 0;
   }
+  h3, label, em {
+    color: #eee;
+  }
+  .form-control {
+    background-color: #aaddf7
+  }
 </style>
 
 

@@ -2,8 +2,11 @@
 
 ## You've got a friend in The Family
 
-[ ] Make all fonts visible
+### Tonight
+[x] Make all fonts visible
 [ ] Deploy
+
+### Tomorrow
 [ ] Provide installation instructions
 [ ] Add state management for cart
 [ ] If already in cart, then any future "Add to cart" simply increases quantity

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h2>"You've got a friend in The Family"</h2>
-    <nav class="navbar navbar-toggleable-md navbar-light">
+    <nav class="navbar navbar-toggleable-md navbar-dark">
       <ul class="navbar-nav">
         <router-link :to="{ name: 'historyLink' }" tag="li">
           <a class="nav-link">HISTORY</a>
@@ -20,3 +20,9 @@
     <router-view></router-view>
   </div>
 </template>
+
+<style scoped>
+  h2 {
+    color: #eee;
+  }
+</style>
