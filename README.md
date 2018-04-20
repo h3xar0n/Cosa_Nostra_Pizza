@@ -3,16 +3,16 @@
 ## You've got a friend in The Family
 
 ### Tonight
-[x] Make all fonts visible
-[ ] Deploy
+- [x] Make all fonts visible
+- [ ] Deploy
 
 ### Tomorrow
-[ ] Provide installation instructions
-[ ] Add state management for cart
-[ ] If already in cart, then any future "Add to cart" simply increases quantity
-[ ] Order total should appear on admin screen as well
-[ ] More content!
-[ ] More style!
+- [ ] Provide installation instructions
+- [ ] Add state management for cart
+- [ ] If already in cart, then any future "Add to cart" simply increases quantity
+- [ ] Order total should appear on admin screen as well
+- [ ] More content!
+- [ ] More style!
 
 > A Vue.js project
 ## Build Setup
