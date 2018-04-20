@@ -61,6 +61,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
   export default {
     data() {
       return {
@@ -69,9 +71,9 @@
       }
     },
     computed: {
-      getMenuItems() {
-        return this.$store.getters.getMenuItems
-      }
+      ...mapGetters ([
+        'getMenuItems'
+      ])
     },
     methods: {
       addToCart(item, option) {

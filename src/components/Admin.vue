@@ -60,6 +60,7 @@
 <script>
 import NewPizza from './NewPizza.vue'
 import Login from './Login.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   components: {
@@ -67,12 +68,10 @@ export default {
     cnpLogin: Login
   },
   computed: {
-    getMenuItems() {
-      return this.$store.getters.getMenuItems
-    },
-    numberOfOrders() {
-      return this.$store.getters.numberOfOrders
-    }
+    ...mapGetters ([
+      'numberOfOrders',
+      'getMenuItems'
+    ])
   },
   beforeRouteLeave: (to, from, next) => {
     if(confirm("The moment you try to get out, we'll pull you back in!") === true ) {
