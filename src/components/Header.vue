@@ -1,12 +1,12 @@
 <template>
   <header class="row">
-    <nav class="navbar navbar-toggleable-md navbar-light">
+    <nav class="navbar navbar-toggleable-md navbar-dark">
       <a href="/" class="navbar-brand">COSA NOSTRA 🍕</a>
       <ul class="navbar-nav">
           <router-link :to="{ name: 'homeLink' }" tag="li">
             <a class="nav-link">HOME</a>
           </router-link>
-          <router-link :to="{ name: 'menuLink' }">
+          <router-link :to="{ name: 'menuLink' }" tag="li">
             <a class="nav-link">MENU</a>
           </router-link>
       </ul>

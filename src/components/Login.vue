@@ -2,9 +2,10 @@
   <div class="row">
     <div>
       <div>
-        <p>Logged in as: <br> {{ currentUser }}</p>
+        <p v-if="currentUser">Logged in as: <br> {{ currentUser }}</p>
+        <p v-else>Are you a friend of the Family?</p>
       </div>
-      
+
       <form>
         <div class="form-group">
           <label for="name">Email Address</label>

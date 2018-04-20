@@ -67,6 +67,13 @@
   </div>
 </template>
 
+<style>
+  .order-number {
+    margin: 10px 0;
+  }
+</style>
+
+
 <script>
 import NewPizza from './NewPizza.vue'
 import Login from './Login.vue'

@@ -41,6 +41,17 @@ export default {
 </script>
 
 <style>
+  body {
+    background: #12192c;
+  }
+
+  header, footer {
+    padding: 40px 0;
+  }
+
+  .navbar-light .navbar-brand {
+    color: #eee;
+  }
 
   h1, h2 {
     font-family: 'Orbitron', sans-serif;
