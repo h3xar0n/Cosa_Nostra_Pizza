@@ -2,15 +2,19 @@
 
 ## You've got a friend in The Family
 
-### Tonight
-- [x] Make all fonts visible
-- [ ] Deploy
 
-### Tomorrow
+- [x] Make all fonts visible
+- [x] Deploy
 - [ ] Provide installation instructions
+- [ ] Fix responsive styling on home component
 - [ ] Add state management for cart
 - [ ] If already in cart, then any future "Add to cart" simply increases quantity
 - [ ] Order total should appear on admin screen as well
+- [ ] Menu displays description of pizza
+- [ ] Admin can add list of ingredients
+- [ ] Menu displays list of ingredients
+- [ ] Admin can add images of pizzas
+- [ ] Menu displays images of pizzas
 - [ ] More content!
 - [ ] More style!
 
