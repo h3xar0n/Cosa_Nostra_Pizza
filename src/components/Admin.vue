@@ -25,7 +25,7 @@
 
     <div class="row">
       <h3>Current orders: {{ numberOfOrders }}</h3>
-      <table class="table table-sm">
+      <table class="table table-sm" :key="orders" v-for="orders in getOrders">
         <thead class="thead-default">
           <tr>
             <th>Item</th>
@@ -39,11 +39,11 @@
             <strong><em>Order Number: 1</em></strong>
             <button class="btn btn-outline-danger btn-sm">X</button>
           </div>
-          <tr>
-            <td>Margherita</td>
-            <td>9"</td>
-            <td>1</td>
-            <td>$6.95</td>
+          <tr :key="orderItems" v-for="orderItems in orders['.value']">
+            <td>{{ orderItems.name }}</td>
+            <td>{{ orderItems.size }}</td>
+            <td>{{ orderItems.quantity }}</td>
+            <td>{{ orderItems.price }}</td>
           </tr>
         </tbody>
       </table>
@@ -70,7 +70,8 @@ export default {
   computed: {
     ...mapGetters ([
       'numberOfOrders',
-      'getMenuItems'
+      'getMenuItems',
+      'getOrders'
     ])
   },
   beforeRouteLeave: (to, from, next) => {
