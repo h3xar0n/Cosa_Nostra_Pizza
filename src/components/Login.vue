@@ -9,11 +9,17 @@
       <form>
         <div class="form-group">
           <label for="name">Email Address</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter email">
+          <input v-model="email"
+                 type="email" 
+                 class="form-control" 
+                 placeholder="Enter email">
         </div>
         <div class="form-group">
           <label for="name">Password</label>
-          <input type="password" class="form-control" id="password" placeholder="Enter password">
+          <input v-model="password"
+                 type="password" 
+                 class="form-control" 
+                 placeholder="Enter password">
         </div>
         <div class="row">
           <button type="button" 
@@ -41,10 +47,16 @@ Firebase.auth().onAuthStateChanged(function(user) {
 });
 
 export default {
+  data() {
+    return {
+      email: '',
+      password: ''
+    }
+  },
   methods: {
     signIn() {
-      let email = document.getElementById('email').value;
-      let password = document.getElementById('password').value;
+      let email = this.email
+      let password = this.password
 
       Firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error){
         let errorCode = error.code;
