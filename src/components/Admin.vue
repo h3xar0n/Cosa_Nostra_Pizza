@@ -1,61 +1,63 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-6">
-        <cnp-new-pizza></cnp-new-pizza>
+    <section v-if="currentUser">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <cnp-new-pizza></cnp-new-pizza>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <h3>Menu:</h3>
+          <table class="table table-hover">
+            <thead class="thead-default">
+              <tr>
+                <th>Item</th>
+                <th>Remove from Menu</th>
+              </tr>
+            </thead>
+            <tbody :key="item['.key']" v-for="item in getMenuItems">
+              <tr>
+                <td>{{ item.name }}</td>
+                <td>
+                    <button class="btn btn-outline-danger btn-sm"
+                            @click="removeMenuItem(item['.key'])">
+                      X
+                    </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="col-sm-12 col-md-6">
-        <h3>Menu:</h3>
-        <table class="table table-hover">
+
+      <div class="row">
+        <h3>Current orders: {{ numberOfOrders }}</h3>
+        <table class="table table-sm" 
+              :key="orders['.key']" 
+              v-for="(orders, index) in getOrders">
           <thead class="thead-default">
             <tr>
               <th>Item</th>
-              <th>Remove from Menu</th>
+              <th>Size</th>
+              <th>Quantity</th>
+              <th>Price</th>
             </tr>
           </thead>
-          <tbody :key="item['.key']" v-for="item in getMenuItems">
-            <tr>
-              <td>{{ item.name }}</td>
-              <td>
-                  <button class="btn btn-outline-danger btn-sm"
-                          @click="removeMenuItem(item['.key'])">
-                    X
-                  </button>
-              </td>
+          <tbody>
+            <div class="order-number">
+              <strong><em>Order Number: {{ index + 1 }}</em></strong>
+              <button class="btn btn-outline-danger btn-sm"
+                      @click="removeOrderItem(orders['.key'])">X</button>
+            </div>
+            <tr :key="orderItems" v-for="orderItems in orders['.value']">
+              <td>{{ orderItems.name }}</td>
+              <td>{{ orderItems.size }}</td>
+              <td>{{ orderItems.quantity }}</td>
+              <td>{{ orderItems.price }}</td>
             </tr>
           </tbody>
         </table>
       </div>
-    </div>
-
-    <div class="row">
-      <h3>Current orders: {{ numberOfOrders }}</h3>
-      <table class="table table-sm" 
-             :key="orders['.key']" 
-             v-for="(orders, index) in getOrders">
-        <thead class="thead-default">
-          <tr>
-            <th>Item</th>
-            <th>Size</th>
-            <th>Quantity</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <div class="order-number">
-            <strong><em>Order Number: {{ index + 1 }}</em></strong>
-            <button class="btn btn-outline-danger btn-sm"
-                    @click="removeOrderItem(orders['.key'])">X</button>
-          </div>
-          <tr :key="orderItems" v-for="orderItems in orders['.value']">
-            <td>{{ orderItems.name }}</td>
-            <td>{{ orderItems.size }}</td>
-            <td>{{ orderItems.quantity }}</td>
-            <td>{{ orderItems.price }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    </section>
     <hr>
     <div class="row">
       <div class="col-sm-12 col-lg-6">
@@ -80,7 +82,8 @@ export default {
     ...mapGetters ([
       'numberOfOrders',
       'getMenuItems',
-      'getOrders'
+      'getOrders',
+      'currentUser'
     ])
   },
   methods: {
