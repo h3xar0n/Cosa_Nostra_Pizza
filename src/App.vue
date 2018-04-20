@@ -26,11 +26,15 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import { dbMenuRef } from './firebaseConfig'
 
 export default {
   components: {
     cnpHeader: Header,
     cnpFooter: Footer
+  },
+  created () {
+    this.$store.dispatch('setMenuRef', dbMenuRef)
   }
 }
 </script>
